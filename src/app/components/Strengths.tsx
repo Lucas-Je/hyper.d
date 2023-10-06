@@ -16,7 +16,7 @@ const data = [
 ];
 const Strengths = () => {
   return (
-    <div className="grid w-full grid-cols-2 gap-16 px-72 py-60 bg-white">
+    <div id="strengths" className="grid w-full grid-cols-2 gap-16 px-72 py-60 bg-white">
       <div className={'flex flex-col justify-around whitespace-pre-line break-keep p-8'}>
         <div className={'flex text-5xl text-[#2B1710] font-bold'}>하이퍼디 강점 분야</div>
         <div className={'flex text-2xl font-bold text-[#2B1710]'}>

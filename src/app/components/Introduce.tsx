@@ -1,6 +1,6 @@
 const Introduce = () => {
   return (
-    <div className={'flex flex-col w-full items-center bg-black px-72 py-60 gap-16'}>
+    <div id="introduce" className={'flex flex-col w-full items-center bg-black px-72 py-60 gap-16'}>
       <div className={'flex text-white text-6xl whitespace-pre-line leading-tight'}>
         {'가격도 결과물도 천차만별인 개발 외주\n 시행착오 없이, 한 번에 하이퍼디.'}
       </div>

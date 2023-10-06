@@ -4,25 +4,121 @@ import Skill from '@/app/components/Skill';
 const data = [
   {
     type: 'WEB',
-    description: '3D 에디팅 프로그램',
-    title: 'PINCH',
+    description: '외국인채용플랫폼',
+    title: '워크비자',
     link: 'https://www.naver.com',
-    techStack: ['Three.js', 'Next.js', 'Nest.js', 'MongoDB'],
+    techStack: ['React Native', 'Django', 'MySQL'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '이벤트 정보 공유 플랫폼',
+    title: '팝스',
+    link: 'https://www.naver.com',
+    techStack: ['React Native', 'Node.js', 'PostgreSQL'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '패션SNS 리워드앱',
+    title: '모두의패션',
+    link: 'https://www.naver.com',
+    techStack: ['Flutter', 'Node.js', 'MongoDB'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '제주 특산물 플랫폼',
+    title: '로컬스루',
+    link: 'https://www.naver.com',
+    techStack: ['React.js', 'Typescript', 'Node.js', 'MongoDB'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '블록체인거래소',
+    title: '오아시스 거래소',
+    link: 'https://www.naver.com',
+    techStack: ['Flutter', 'Next.js', 'Nest.js', 'gRPC', 'Plasma', 'RabbitMQ'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '인맥 관리 앱',
+    title: '오랜만',
+    link: 'https://www.naver.com',
+    techStack: ['React Native', 'Realm', 'Typescript', 'Node.js'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '소상공인 회원관리 앱',
+    title: '핑캘린더',
+    link: 'https://www.naver.com',
+    techStack: ['Flutter', 'Dart'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '어린이 수학교육 플랫폼',
+    title: '매쓰팡',
+    link: 'https://www.naver.com',
+    techStack: ['React Native', 'Typescript'],
     images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
   },
   {
     type: 'WEB',
-    description: '3D 에디팅 프로그램',
-    title: 'PINCH',
+    description: '영어회화 라이브 스트리밍 플랫폼',
+    title: '에피소든',
     link: 'https://www.naver.com',
-    techStack: ['Three.js', 'Next.js', 'Nest.js', 'MongoDB'],
+    techStack: ['Next.js', 'Typescript', 'WebRTC'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'WEB',
+    description: '모임 플랫폼',
+    title: '트레바리',
+    link: 'https://www.naver.com',
+    techStack: ['React.js', 'Typescript'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'APP',
+    description: '공유오피스 관리용 SAAS 운영',
+    title: 'GADJET',
+    link: 'https://www.naver.com',
+    techStack: ['React.js', 'Node.js', 'React Native'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'WEB',
+    description: '소셜 오디오 컨텐츠 플랫폼',
+    title: 'NADIO',
+    link: 'https://www.naver.com',
+    techStack: ['React Native', 'Django', 'Python', 'PostgreSQL'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'WEB',
+    description: '이메일 마케팅 툴',
+    title: 'VARY',
+    link: 'https://www.naver.com',
+    techStack: ['React.js', 'AWS', 'Node.js', 'MongoDB'],
+    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+  },
+  {
+    type: 'SERVER',
+    description: '메타버스 소켓 서버',
+    title: '팝스',
+    link: 'https://www.naver.com',
+    techStack: ['Node.js', 'MongoDB', 'WebRTC', 'Socket', 'AWS'],
     images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
   },
 ];
 
 const Portfolio = () => {
   return (
-    <div className={'flex flex-col w-full px-72 py-60 gap-4'}>
+    <div id="portfolio" className={'flex flex-col w-full px-72 py-60 gap-4 bg-white z-1'}>
       <div className={'text-[#565CFF] text-lg font-medium'}>PORTFOLIO</div>
       <div className={'text-[#2F2D35] text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
         {'하이퍼디 포트폴리오'}
@@ -35,8 +131,8 @@ const Portfolio = () => {
                 <div className={'flex border w-9 font-ibmPlexMono text-sm font-semibold'}>{value.type}</div>
                 <div className={'text-[#2F2D35] text-4xl font-normal'}>{value.description}</div>
                 <div className={'text-[#2F2D35] text-4xl font-bold '}>{value.title}</div>
-                <div className={'flex flex-row gap-1 border-b border-[#2F2D35]'}>
-                  <div className={'text-lg font-medium text-[#2F2D35]'}>바로가기</div>
+                <div className={'flex w-24 flex-row gap-1 border-b border-[#2F2D35]'}>
+                  <div className={'flex text-lg font-medium text-[#2F2D35]'}>바로가기</div>
                   <div className={'flex w-auto h-auto'}>
                     <Image
                       src={'/assets/icons/arrow_forward_black.svg'}

@@ -20,7 +20,7 @@ const data = [
 ];
 const Description = () => {
   return (
-    <div className="grid w-full grid-cols-2 gap-16 px-72 py-60 bg-white">
+    <div id="description" className="grid w-full grid-cols-2 gap-16 px-72 py-60 bg-white">
       {data.map((value, index) => {
         return (
           <div key={index} className={'flex flex-col gap-1 justify-between whitespace-pre-line break-keep'}>

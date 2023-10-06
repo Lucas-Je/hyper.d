@@ -4,7 +4,7 @@ import Skill from '@/app/components/Skill';
 const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Android', 'iOS', 'Java'];
 const Service = () => {
   return (
-    <div className={'flex flex-col w-full bg-white px-72 py-60 gap-4'}>
+    <div id="service" className={'flex flex-col w-full bg-white px-72 py-60 gap-4'}>
       <div className={'text-[#565CFF] text-lg font-medium'}>SERVICE AREA</div>
       <div className={'flex flex-col gap-16'}>
         <div className={'text-[#2F2D35] text-6xl font-bold whitespace-pre-line break-keep '}>
