@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
-import cls from '@/app/utils/cls';
+import cls from '@/src/utils/cls';
 
 const inter = Inter({
   subsets: ['latin'],

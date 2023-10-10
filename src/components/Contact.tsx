@@ -118,7 +118,9 @@ const Contact = () => {
         <div className={'flex w-full items-center justify-start'}>
           <button
             disabled={!isValid}
-            className={`${isValid ? 'bg-[#7959f2]' : 'bg-[#DEDEDE]'} 'bg-[#7959f2] px-32 py-3 text-white text-base'`}
+            className={`${
+              isValid ? 'bg-[#7959f2] cursor-poiner' : 'bg-[#DEDEDE]'
+            } bg-[#7959f2] px-[68px] py-[12px] text-white text-base`}
             type="submit">
             보내기
           </button>

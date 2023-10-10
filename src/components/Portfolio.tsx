@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Skill from '@/app/components/Skill';
+import Skill from '@/src/components/Skill';
 
 const data = [
   {
@@ -127,11 +127,21 @@ const Portfolio = () => {
         {data.map((value, index) => {
           return (
             <div key={index} className={'flex flex-row gap-32'}>
-              <div className={'flex flex-none flex-col gap-2'}>
-                <div className={'flex border w-9 font-ibmPlexMono text-sm font-semibold'}>{value.type}</div>
-                <div className={'text-[#2F2D35] text-4xl font-normal'}>{value.description}</div>
+              <div className={'flex flex-none flex-col gap-2 max-w-[500px]'}>
+                <div
+                  className={
+                    'border border-black items-center justify-center px-[4px] py-[2px] font-ibmPlexMono text-sm font-semibold w-min'
+                  }>
+                  {value.type}
+                </div>
+                <div className={'text-[#2F2D35] text-4xl font-normal mt-[16px]'}>{value.description}</div>
                 <div className={'text-[#2F2D35] text-4xl font-bold '}>{value.title}</div>
-                <div className={'flex w-24 flex-row gap-1 border-b border-[#2F2D35]'}>
+                <a
+                  href={value.link}
+                  target="_blank"
+                  className={
+                    'flex w-24 flex-row items-center justify-center gap-1 border-b border-[#2F2D35] mt-[16px]'
+                  }>
                   <div className={'flex text-lg font-medium text-[#2F2D35]'}>바로가기</div>
                   <div className={'flex w-auto h-auto'}>
                     <Image
@@ -143,15 +153,15 @@ const Portfolio = () => {
                       alt={'logo'}
                     />
                   </div>
-                </div>
+                </a>
                 <div className={'text-[#646464] text-lg font-normal pt-8'}>사용된 테크 스택</div>
-                <div className="grid w-full grid-cols-2 gap-2">
+                <div className="flex flex-wrap gap-2">
                   {value.techStack.map((skill, index) => {
                     return <Skill key={index} value={skill} />;
                   })}
                 </div>
               </div>
-              <div className={'flex flex-1 items-center justify-center flex-row gap-4'}>
+              <div className={'flex flex-1 items-center justify-center flex-row gap-4 bg-green'}>
                 {value.images.map((image, index) => {
                   return (
                     <div key={index} className={'flex flex-1 w-auto h-auto'}>

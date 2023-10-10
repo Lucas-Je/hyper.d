@@ -20,7 +20,7 @@ const Header = () => {
     elem?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
   return (
-    <div className={'flex flex-row w-full items-center justify-between bg-white px-72 py-8'}>
+    <div className={'flex flex-row w-full items-center justify-between bg-white px-72 h-[56px]'}>
       <div className={'flex w-auto h-auto'}>
         <Image src={'logo.svg'} width="0" height="0" sizes="100vw" className="w-full h-auto" alt={'logo'} />
       </div>

@@ -39,9 +39,13 @@ const data = [
     icon: '/assets/images/testimonial/avatar1.png',
   },
 ];
+
 const Testimonial = () => {
   return (
-    <div id="reviews" className={'flex w-full py-16 px-64 bg-white'}>
+    <div id="reviews" className={'flex w-full flex-col py-16 px-72 bg-white gap-4'}>
+      <div className="text-[#2F2D35] text-[60px] font-bold whitespace-pre-line break-keep pb-16 leading-[1.2]">
+        고객 후기
+      </div>
       <Swiper
         className={'@apply w-full'}
         slidesPerView={3.2}
