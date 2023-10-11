@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Skill from '@/src/components/Skill';
-import Link from 'next/link';
+import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Android', 'iOS', 'Java'];
 const Service = () => {
@@ -21,9 +21,9 @@ const Service = () => {
           <div className={'flex flex-row gap-2'}>
             <div className={'flex flex-col text-lg font-medium text-[#646464]'}>원하는 테크스택이 따로 있나요?</div>
             <div className={'flex flex-row gap-1 border-b border-[#2F2D35]'}>
-              <Link href="#contact" className={'text-lg font-medium text-[#2F2D35]'}>
+              <SmoothLink href={'#contact'} className={'text-lg font-medium text-[#2F2D35]'}>
                 문의하기
-              </Link>
+              </SmoothLink>
               <div className={'flex w-auto h-auto'}>
                 <Image
                   src={'/assets/icons/arrow_forward_black.svg'}

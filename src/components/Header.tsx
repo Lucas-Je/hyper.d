@@ -3,6 +3,7 @@ import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const data = [
   { label: '서비스 소개', url: '#description' },
@@ -12,13 +13,6 @@ const data = [
 ];
 
 const Header = () => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    const href = e.currentTarget?.href;
-    const targetId = href.replace(/.*#/, '');
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-  };
   return (
     <div className={'flex flex-row w-full items-center justify-between bg-white px-72 h-[56px]'}>
       <div className={'flex w-auto h-auto'}>
@@ -27,9 +21,9 @@ const Header = () => {
       <div className={'flex w-auto h-auto gap-8 text-[#2F2D35] text-sm'}>
         {data.map((value, index) => {
           return (
-            <Link key={index} href={value.url} onClick={handleClick}>
+            <SmoothLink key={index} href={value.url} scrollPosition={'start'}>
               {value.label}
-            </Link>
+            </SmoothLink>
           );
         })}
       </div>

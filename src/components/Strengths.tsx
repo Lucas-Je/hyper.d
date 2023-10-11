@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const data = [
   {
@@ -38,9 +39,9 @@ const Strengths = () => {
               <div className={'flex text-[36px] text-[#2B1710] leading-[1.3] font-bold'}>{value.title}</div>
               <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6]'}>{value.description}</div>
             </div>
-            <Link href="#portfolio" className={'flex text-lg text-[#4A77FF]'}>
+            <SmoothLink href="#portfolio" className={'flex text-lg text-[#4A77FF]'}>
               포트폴리오 보기
-            </Link>
+            </SmoothLink>
           </div>
         );
       })}
