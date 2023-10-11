@@ -58,75 +58,81 @@ const Contact = () => {
       return false;
     }
   };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (contactData) {
       await postMessageToSlack(contactData);
     }
   };
+
   return (
-    <div id="contact" className={'flex flex-col w-full bg-white px-72 py-48 gap-6'}>
-      <div className={'text-3xl font-bold'}>문의하기</div>
-      <form className={'flex w-full flex-col items-center gap-4'} onSubmit={handleSubmit}>
-        <div className={'flex w-full flex-row gap-4'}>
-          <input
+    <div id="contact" className={'flex flex-row w-full items-center justify-center bg-white py-48'}>
+      <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-6">
+        <div className={'text-3xl font-bold'}>문의하기</div>
+        <form className={'flex w-full flex-col items-center gap-4'} onSubmit={handleSubmit}>
+          <div className={'flex w-full flex-row gap-4'}>
+            <input
+              className={
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+              }
+              type="text"
+              placeholder="회사명*"
+              value={contactData.company}
+              onChange={(event) => setContactData({ ...contactData, company: event.target.value })}
+            />
+            <input
+              className={
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+              }
+              type="text"
+              placeholder="성함*"
+              value={contactData.name}
+              onChange={(event) => setContactData({ ...contactData, name: event.target.value })}
+            />
+          </div>
+          <div className={'flex w-full flex-row gap-4'}>
+            <input
+              className={
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+              }
+              type="tel"
+              placeholder="전화번호*"
+              value={contactData.phone}
+              onChange={(event) => setContactData({ ...contactData, phone: event.target.value })}
+            />
+            <input
+              className={
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+              }
+              type="email"
+              placeholder="이메일*"
+              value={contactData.email}
+              onChange={(event) => setContactData({ ...contactData, email: event.target.value })}
+            />
+          </div>
+          <textarea
             className={
-              'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+              'flex w-full border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
             }
-            type="text"
-            placeholder="회사명*"
-            value={contactData.company}
-            onChange={(event) => setContactData({ ...contactData, company: event.target.value })}
+            placeholder="문의사항*"
+            value={contactData.inquiry}
+            rows={5}
+            onChange={(event) => setContactData({ ...contactData, inquiry: event.target.value })}
           />
-          <input
-            className={
-              'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
-            }
-            type="text"
-            placeholder="성함*"
-            value={contactData.name}
-            onChange={(event) => setContactData({ ...contactData, name: event.target.value })}
-          />
-        </div>
-        <div className={'flex w-full flex-row gap-4'}>
-          <input
-            className={
-              'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
-            }
-            type="tel"
-            placeholder="전화번호*"
-            value={contactData.phone}
-            onChange={(event) => setContactData({ ...contactData, phone: event.target.value })}
-          />
-          <input
-            className={
-              'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
-            }
-            type="email"
-            placeholder="이메일*"
-            value={contactData.email}
-            onChange={(event) => setContactData({ ...contactData, email: event.target.value })}
-          />
-        </div>
-        <textarea
-          className={'flex w-full border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'}
-          placeholder="문의사항*"
-          value={contactData.inquiry}
-          rows={5}
-          onChange={(event) => setContactData({ ...contactData, inquiry: event.target.value })}
-        />
-        <div className={'flex w-full items-center justify-start'}>
-          <button
-            disabled={!isValid}
-            className={`${
-              isValid ? 'bg-[#7959f2] cursor-poiner' : 'bg-[#DEDEDE]'
-            } bg-[#7959f2] px-[68px] py-[12px] text-white text-base`}
-            type="submit">
-            보내기
-          </button>
-        </div>
-      </form>
-      <ToastContainer />
+          <div className={'flex w-full items-center justify-start'}>
+            <button
+              disabled={!isValid}
+              className={`${
+                isValid ? 'bg-[#7959f2] cursor-poiner' : 'bg-[#DEDEDE]'
+              } bg-[#7959f2] px-[68px] py-[12px] text-white text-base`}
+              type="submit">
+              보내기
+            </button>
+          </div>
+        </form>
+        <ToastContainer />
+      </div>
     </div>
   );
 };

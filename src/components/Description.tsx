@@ -21,15 +21,17 @@ const data = [
 
 const Description = () => {
   return (
-    <div id="description" className="grid w-full grid-cols-2 gap-16 px-72 py-60 bg-white">
-      {data.map((value, index) => {
-        return (
-          <div key={index} className={'flex flex-col gap-1 justify-start whitespace-pre-line break-keep'}>
-            <div className={'flex text-[48px] text-[#2B1710] leading-[1.2] font-bold'}>{value.title}</div>
-            <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6] mt-[20px]'}>{value.description}</div>
-          </div>
-        );
-      })}
+    <div id="description" className="flex items-center justify-center w-full py-60 bg-white px-[16px]">
+      <div className="grid grid-cols-2 max-w-screen-xl gap-16">
+        {data.map((value, index) => {
+          return (
+            <div key={index} className={'flex flex-col gap-1 justify-start whitespace-pre-line break-keep'}>
+              <div className={'flex text-[48px] text-[#2B1710] leading-[1.2] font-bold'}>{value.title}</div>
+              <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6] mt-[20px]'}>{value.description}</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

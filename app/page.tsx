@@ -13,7 +13,7 @@ import Clients from '@/src/components/Clients';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center font-inter">
+    <main className="flex min-h-screen flex-col items-center font-inter bg-white">
       <Header />
       <Introduce />
       <Description />

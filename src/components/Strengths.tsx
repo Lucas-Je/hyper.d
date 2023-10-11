@@ -20,31 +20,33 @@ const data = [
 
 const Strengths = () => {
   return (
-    <div id="strengths" className="grid w-full grid-rows-6 grid-flow-col gap-[24px] px-72 py-60 bg-white">
-      <div className={'flex flex-col row-span-2 justify-around whitespace-pre-line break-keep py-[2px]'}>
-        <div className={'flex text-5xl text-[#2B1710] font-bold'}>하이퍼디 강점 분야</div>
-        <div className={'flex text-2xl font-bold text-[#2B1710]'}>
-          {'어려운 기술부터 노하우가 필요한 서비스까지,\n개발 경험이 있는 팀에게 맡기세요.'}
-        </div>
-      </div>
-      {data.map((value, index) => {
-        return (
-          <div
-            key={index}
-            className={`flex flex-col row-span-${
-              index === 0 ? 4 : 3
-            } gap-[10px] rounded-xl justify-between whitespace-pre-line break-keep p-8`}
-            style={{ boxShadow: '0px 4px 17px 0px rgba(0, 0, 0, 0.15)' }}>
-            <div className="flex flex-col gap-[10px]">
-              <div className={'flex text-[36px] text-[#2B1710] leading-[1.3] font-bold'}>{value.title}</div>
-              <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6]'}>{value.description}</div>
-            </div>
-            <SmoothLink href="#portfolio" className={'flex text-lg text-[#4A77FF]'}>
-              포트폴리오 보기
-            </SmoothLink>
+    <div id="strengths" className="flex items-center justify-center py-60 bg-white">
+      <div className="grid grid-rows-6 grid-flow-col gap-[24px] px-[16px] max-w-screen-xl">
+        <div className={'flex flex-col row-span-2 justify-around whitespace-pre-line break-keep py-[2px]'}>
+          <div className={'flex text-5xl text-[#2B1710] font-bold'}>하이퍼디 강점 분야</div>
+          <div className={'flex text-2xl font-bold text-[#2B1710]'}>
+            {'어려운 기술부터 노하우가 필요한 서비스까지,\n개발 경험이 있는 팀에게 맡기세요.'}
           </div>
-        );
-      })}
+        </div>
+        {data.map((value, index) => {
+          return (
+            <div
+              key={index}
+              className={`flex flex-col row-span-${
+                index === 0 ? 4 : 3
+              } gap-[10px] rounded-xl justify-between whitespace-pre-line break-keep p-8`}
+              style={{ boxShadow: '0px 4px 17px 0px rgba(0, 0, 0, 0.15)' }}>
+              <div className="flex flex-col gap-[10px]">
+                <div className={'flex text-[36px] text-[#2B1710] leading-[1.3] font-bold'}>{value.title}</div>
+                <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6]'}>{value.description}</div>
+              </div>
+              <SmoothLink href="#portfolio" className={'flex text-lg text-[#4A77FF]'}>
+                포트폴리오 보기
+              </SmoothLink>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -14,18 +14,20 @@ const data = [
 
 const Header = () => {
   return (
-    <div className={'flex flex-row w-full items-center justify-between bg-white px-72 h-[56px]'}>
-      <div className={'flex w-auto h-auto'}>
-        <Image src={'logo.svg'} width="0" height="0" sizes="100vw" className="w-full h-auto" alt={'logo'} />
-      </div>
-      <div className={'flex w-auto h-auto gap-8 text-[#2F2D35] text-sm'}>
-        {data.map((value, index) => {
-          return (
-            <SmoothLink key={index} href={value.url} scrollPosition={'start'}>
-              {value.label}
-            </SmoothLink>
-          );
-        })}
+    <div className="flex w-full bg-white items-center justify-center bg-white">
+      <div className={'flex flex-row flex-1 items-center justify-between h-[56px] px-[16px] bg-white max-w-screen-xl'}>
+        <div className={'flex w-auto h-auto'}>
+          <Image src={'logo.svg'} width="0" height="0" sizes="100vw" className="w-full h-auto" alt={'logo'} />
+        </div>
+        <div className={'flex w-auto h-auto gap-8 text-[#2F2D35] text-sm'}>
+          {data.map((value, index) => {
+            return (
+              <SmoothLink key={index} href={value.url} scrollPosition={'start'}>
+                {value.label}
+              </SmoothLink>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

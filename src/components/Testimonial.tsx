@@ -42,45 +42,47 @@ const data = [
 
 const Testimonial = () => {
   return (
-    <div id="reviews" className={'flex w-full flex-col py-16 px-72 bg-white gap-4'}>
-      <div className="text-[#2F2D35] text-[60px] font-bold whitespace-pre-line break-keep pb-16 leading-[1.2]">
-        고객 후기
-      </div>
-      <Swiper
-        className={'@apply w-full'}
-        slidesPerView={3.2}
-        spaceBetween={16}
-        initialSlide={data.length / 2}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}>
-        {data.map((value, index) => {
-          return (
-            <SwiperSlide key={index} className={'@apply flex w-auto bg-black rounded-3xl p-8'}>
-              <div className={'flex h-72 justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep'}>
-                <div className={'flex flex-col gap-8'}>
-                  <div className={'text-lg text-[#2F78FF]'}>{value.title}</div>
-                  <div className={'text-2xl font-bold  text-white'}>{value.description}</div>
-                </div>
-                <div className={'flex flex-row justify-between items-center'}>
-                  <div className={'text-lg opacity-60 text-white'}>{value.writer}</div>
-                  <div className={'flex w-12 h-auto bg-white rounded-full'}>
-                    <Image
-                      src={value.icon}
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="w-full h-auto"
-                      alt={value.writer}
-                    />
+    <div id="reviews" className={'flex items-center justify-center w-full py-16 bg-white'}>
+      <div className="flex flex-col max-w-screen-xl gap-4">
+        <div className="text-[#2F2D35] text-[60px] font-bold whitespace-pre-line break-keep pb-16 leading-[1.2]">
+          고객 후기
+        </div>
+        <Swiper
+          className={'@apply w-full'}
+          slidesPerView={3.2}
+          spaceBetween={16}
+          initialSlide={data.length / 2}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}>
+          {data.map((value, index) => {
+            return (
+              <SwiperSlide key={index} className={'@apply flex w-auto bg-black rounded-3xl p-8'}>
+                <div className={'flex h-72 justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep'}>
+                  <div className={'flex flex-col gap-8'}>
+                    <div className={'text-lg text-[#2F78FF]'}>{value.title}</div>
+                    <div className={'text-2xl font-bold  text-white'}>{value.description}</div>
+                  </div>
+                  <div className={'flex flex-row justify-between items-center'}>
+                    <div className={'text-lg opacity-60 text-white'}>{value.writer}</div>
+                    <div className={'flex w-12 h-auto bg-white rounded-full'}>
+                      <Image
+                        src={value.icon}
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="w-full h-auto"
+                        alt={value.writer}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 };
