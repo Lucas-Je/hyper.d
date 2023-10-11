@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Skill from '@/src/components/Skill';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 const data = [
   {
     type: 'WEB',
     description: '외국인채용플랫폼',
     title: '워크비자',
-    link: 'https://www.naver.com',
+    link: 'https://workvisa.co.kr/',
     techStack: ['React Native', 'Django', 'MySQL'],
     images: [
       '/assets/images/portfolio/workvisa-1.png',
@@ -20,19 +19,15 @@ const data = [
     type: 'APP',
     description: '이벤트 정보 공유 플랫폼',
     title: '팝스',
-    link: 'https://www.naver.com',
+    link: 'https://play.google.com/store/apps/details?id=com.popsclient',
     techStack: ['React Native', 'Node.js', 'PostgreSQL'],
-    images: [
-      '/assets/images/portfolio/pops-web-1.png',
-      '/assets/images/portfolio/pops-web-2.png',
-      '/assets/images/portfolio/pops-web-3.png',
-    ],
+    images: ['/assets/images/portfolio/pops-app-1.png', '/assets/images/portfolio/pops-app-2.png'],
   },
   {
     type: 'APP',
     description: '패션SNS 리워드앱',
     title: '모두의패션',
-    link: 'https://www.naver.com',
+    link: 'https://play.google.com/store/apps/details?id=com.modoofashion.client&hl=ko-KR',
     techStack: ['Flutter', 'Node.js', 'MongoDB'],
     images: [
       '/assets/images/portfolio/modoo-fashion-1.png',
@@ -45,7 +40,7 @@ const data = [
     type: 'APP',
     description: '제주 특산물 플랫폼',
     title: '로컬스루',
-    link: 'https://www.naver.com',
+    link: 'https://localthru.co.kr/',
     techStack: ['React.js', 'Typescript', 'Node.js', 'MongoDB'],
     images: [
       '/assets/images/portfolio/local-through-1.png',
@@ -57,15 +52,15 @@ const data = [
     type: 'APP',
     description: '블록체인거래소',
     title: '오아시스 거래소',
-    link: 'https://www.naver.com',
+    link: 'https://oasisexc.com/',
     techStack: ['Flutter', 'Next.js', 'Nest.js', 'gRPC', 'Plasma', 'RabbitMQ'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: ['/assets/images/portfolio/oasis-exchange-1.png'],
   },
   {
     type: 'APP',
     description: '인맥 관리 앱',
     title: '오랜만',
-    link: 'https://www.naver.com',
+    link: 'https://play.google.com/store/apps/details?id=com.oranman',
     techStack: ['React Native', 'Realm', 'Typescript', 'Node.js'],
     images: [
       '/assets/images/portfolio/oranman-1.png',
@@ -77,7 +72,7 @@ const data = [
     type: 'APP',
     description: '소상공인 회원관리 앱',
     title: '핑캘린더',
-    link: 'https://www.naver.com',
+    link: 'https://play.google.com/store/apps/details?id=com.tothepoint.pingtopong&hl=ko&gl=US',
     techStack: ['Flutter', 'Dart'],
     images: [
       '/assets/images/portfolio/pingcalender-1.png',
@@ -89,7 +84,7 @@ const data = [
     type: 'APP',
     description: '어린이 수학교육 플랫폼',
     title: '매쓰팡',
-    link: 'https://www.naver.com',
+    link: 'https://play.google.com/store/apps/details?id=com.mathpang.game',
     techStack: ['React Native', 'Typescript'],
     images: [
       '/assets/images/portfolio/mathpang-1.png',
@@ -101,7 +96,7 @@ const data = [
     type: 'WEB',
     description: '영어회화 라이브 스트리밍 플랫폼',
     title: '에피소든',
-    link: 'https://www.naver.com',
+    link: 'https://episoden.com/main',
     techStack: ['Next.js', 'Typescript', 'WebRTC'],
     images: [
       '/assets/images/portfolio/episoden-1.png',
@@ -113,7 +108,7 @@ const data = [
     type: 'WEB',
     description: '모임 플랫폼',
     title: '트레바리',
-    link: 'https://www.naver.com',
+    link: 'https://m.trevari.co.kr/',
     techStack: ['React.js', 'Typescript'],
     images: [
       '/assets/images/portfolio/trevari-1.png',
@@ -126,7 +121,7 @@ const data = [
     type: 'APP',
     description: '공유오피스 관리용 SAAS 운영',
     title: 'GADJET',
-    link: 'https://www.naver.com',
+    link: 'https://gadjet.io/',
     techStack: ['React.js', 'Node.js', 'React Native'],
     images: [
       '/assets/images/portfolio/gadjet-1.png',
@@ -139,7 +134,7 @@ const data = [
     type: 'WEB',
     description: '소셜 오디오 컨텐츠 플랫폼',
     title: 'NADIO',
-    link: 'https://www.naver.com',
+    link: 'https://www.nadio.co.kr/',
     techStack: ['React Native', 'Django', 'Python', 'PostgreSQL'],
     images: [
       '/assets/images/portfolio/nadio-1.png',
@@ -151,15 +146,15 @@ const data = [
     type: 'WEB',
     description: '이메일 마케팅 툴',
     title: 'VARY',
-    link: 'https://www.naver.com',
+    link: 'https://vary.one/',
     techStack: ['React.js', 'AWS', 'Node.js', 'MongoDB'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: ['/assets/images/portfolio/vary-1.png'],
   },
   {
     type: 'SERVER',
     description: '메타버스 소켓 서버',
     title: '팝스',
-    link: 'https://www.naver.com',
+    link: 'https://pops.show/',
     techStack: ['Node.js', 'MongoDB', 'WebRTC', 'Socket', 'AWS'],
     images: [
       '/assets/images/portfolio/pops-web-1.png',
@@ -180,7 +175,7 @@ const Portfolio = () => {
         <div className={'flex flex-col gap-32'}>
           {data.map((value, index) => {
             return (
-              <div key={index} className={'flex flex-row gap-4'}>
+              <div key={index} className={'flex flex-row gap-8'}>
                 <div className={'flex flex-none flex-col gap-2 w-[400px]'}>
                   <div
                     className={
@@ -215,8 +210,8 @@ const Portfolio = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex flex-1 flex-row gap-2 overflow-x-scroll">
-                  <div className="flex flex-1 w-auto h-auto gap-2">
+                <div className="flex flex-1 flex-row overflow-x-scroll">
+                  <div className="flex flex-1 w-auto h-auto gap-4">
                     {value.images.map((item, index) => (
                       <Image
                         key={value.title + index}
