@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const data = [

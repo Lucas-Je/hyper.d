@@ -2,7 +2,6 @@
 import React from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const data = [
