@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Skill from '@/src/components/Skill';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const data = [
   {
@@ -8,7 +9,12 @@ const data = [
     title: '워크비자',
     link: 'https://www.naver.com',
     techStack: ['React Native', 'Django', 'MySQL'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/workvisa-1.png',
+      '/assets/images/portfolio/workvisa-3.png',
+      '/assets/images/portfolio/workvisa-4.png',
+      '/assets/images/portfolio/workvisa-2.png',
+    ],
   },
   {
     type: 'APP',
@@ -16,7 +22,11 @@ const data = [
     title: '팝스',
     link: 'https://www.naver.com',
     techStack: ['React Native', 'Node.js', 'PostgreSQL'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/pops-web-1.png',
+      '/assets/images/portfolio/pops-web-2.png',
+      '/assets/images/portfolio/pops-web-3.png',
+    ],
   },
   {
     type: 'APP',
@@ -24,7 +34,12 @@ const data = [
     title: '모두의패션',
     link: 'https://www.naver.com',
     techStack: ['Flutter', 'Node.js', 'MongoDB'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/modoo-fashion-1.png',
+      '/assets/images/portfolio/modoo-fashion-2.png',
+      '/assets/images/portfolio/modoo-fashion-3.png',
+      '/assets/images/portfolio/modoo-fashion-4.png',
+    ],
   },
   {
     type: 'APP',
@@ -32,7 +47,11 @@ const data = [
     title: '로컬스루',
     link: 'https://www.naver.com',
     techStack: ['React.js', 'Typescript', 'Node.js', 'MongoDB'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/local-through-1.png',
+      '/assets/images/portfolio/local-through-2.png',
+      '/assets/images/portfolio/local-through-3.png',
+    ],
   },
   {
     type: 'APP',
@@ -48,7 +67,11 @@ const data = [
     title: '오랜만',
     link: 'https://www.naver.com',
     techStack: ['React Native', 'Realm', 'Typescript', 'Node.js'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/oranman-1.png',
+      '/assets/images/portfolio/oranman-2.png',
+      '/assets/images/portfolio/oranman-3.png',
+    ],
   },
   {
     type: 'APP',
@@ -56,7 +79,11 @@ const data = [
     title: '핑캘린더',
     link: 'https://www.naver.com',
     techStack: ['Flutter', 'Dart'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/pingcalender-1.png',
+      '/assets/images/portfolio/pingcalender-2.png',
+      '/assets/images/portfolio/pingcalender-3.png',
+    ],
   },
   {
     type: 'APP',
@@ -64,7 +91,11 @@ const data = [
     title: '매쓰팡',
     link: 'https://www.naver.com',
     techStack: ['React Native', 'Typescript'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/mathpang-1.png',
+      '/assets/images/portfolio/mathpang-2.png',
+      '/assets/images/portfolio/mathpang-3.png',
+    ],
   },
   {
     type: 'WEB',
@@ -72,7 +103,11 @@ const data = [
     title: '에피소든',
     link: 'https://www.naver.com',
     techStack: ['Next.js', 'Typescript', 'WebRTC'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/episoden-1.png',
+      '/assets/images/portfolio/episoden-2.png',
+      '/assets/images/portfolio/episoden-3.png',
+    ],
   },
   {
     type: 'WEB',
@@ -80,7 +115,12 @@ const data = [
     title: '트레바리',
     link: 'https://www.naver.com',
     techStack: ['React.js', 'Typescript'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/trevari-1.png',
+      '/assets/images/portfolio/trevari-2.png',
+      '/assets/images/portfolio/trevari-3.png',
+      '/assets/images/portfolio/trevari-4.png',
+    ],
   },
   {
     type: 'APP',
@@ -88,7 +128,12 @@ const data = [
     title: 'GADJET',
     link: 'https://www.naver.com',
     techStack: ['React.js', 'Node.js', 'React Native'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/gadjet-1.png',
+      '/assets/images/portfolio/gadjet-3.png',
+      '/assets/images/portfolio/gadjet-4.png',
+      '/assets/images/portfolio/gadjet-2.png',
+    ],
   },
   {
     type: 'WEB',
@@ -96,7 +141,11 @@ const data = [
     title: 'NADIO',
     link: 'https://www.naver.com',
     techStack: ['React Native', 'Django', 'Python', 'PostgreSQL'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/nadio-1.png',
+      '/assets/images/portfolio/nadio-2.png',
+      '/assets/images/portfolio/nadio-3.png',
+    ],
   },
   {
     type: 'WEB',
@@ -112,23 +161,27 @@ const data = [
     title: '팝스',
     link: 'https://www.naver.com',
     techStack: ['Node.js', 'MongoDB', 'WebRTC', 'Socket', 'AWS'],
-    images: ['/assets/images/portfolio/pinch_1.png', '/assets/images/portfolio/pinch_2.png'],
+    images: [
+      '/assets/images/portfolio/pops-web-1.png',
+      '/assets/images/portfolio/pops-web-2.png',
+      '/assets/images/portfolio/pops-web-3.png',
+    ],
   },
 ];
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" className={'flex flex-row w-full items-center justify-center py-60 bg-white z-1'}>
-      <div className="flex flex-col max-w-screen-xl px-[16px] gap-4">
+    <div id="portfolio" className={'flex flex-row w-full items-center justify-center py-40 bg-white z-1'}>
+      <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
         <div className={'text-[#565CFF] text-lg font-medium'}>PORTFOLIO</div>
         <div className={'text-[#2F2D35] text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
-          {'하이퍼디 포트폴리오'}
+          하이퍼디 포트폴리오
         </div>
         <div className={'flex flex-col gap-32'}>
           {data.map((value, index) => {
             return (
-              <div key={index} className={'flex flex-row gap-32'}>
-                <div className={'flex flex-none flex-col gap-2 max-w-[500px]'}>
+              <div key={index} className={'flex flex-row gap-4'}>
+                <div className={'flex flex-none flex-col gap-2 w-[400px]'}>
                   <div
                     className={
                       'border border-black items-center justify-center px-[4px] py-[2px] font-ibmPlexMono text-sm font-semibold w-min'
@@ -162,21 +215,21 @@ const Portfolio = () => {
                     })}
                   </div>
                 </div>
-                <div className={'flex flex-1 items-center justify-center flex-row gap-4 bg-green'}>
-                  {value.images.map((image, index) => {
-                    return (
-                      <div key={index} className={'flex flex-1 w-auto h-auto'}>
-                        <Image
-                          src={image}
-                          width="0"
-                          height="0"
-                          sizes="100vw"
-                          className="w-full h-auto border border-[#BEC1FF] rounded-3xl"
-                          alt={'logo'}
-                        />
-                      </div>
-                    );
-                  })}
+                <div className="flex flex-1 flex-row gap-2 overflow-x-scroll">
+                  <div className="flex flex-1 w-auto h-auto gap-2">
+                    {value.images.map((item, index) => (
+                      <Image
+                        key={value.title + index}
+                        src={item}
+                        className="h-full w-auto border border-[#BEC1FF] rounded-[20px]"
+                        width="0"
+                        height="0"
+                        objectFit="cover"
+                        alt=""
+                        sizes="100vw"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             );

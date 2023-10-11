@@ -2,7 +2,7 @@ import SmoothLink from '@/src/components/Atoms/SmoothLink';
 
 const Strengths = () => {
   return (
-    <div id="strengths" className="flex items-center justify-center py-60 bg-white">
+    <div id="strengths" className="flex items-center justify-center py-40 bg-white">
       <div className="grid grid-rows-6 grid-flow-col gap-[24px] px-[16px] max-w-screen-xl">
         <div className={'flex flex-col row-span-2 justify-around whitespace-pre-line break-keep py-[2px]'}>
           <div className={'flex text-5xl text-[#2B1710] font-bold'}>하이퍼디 강점 분야</div>

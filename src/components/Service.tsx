@@ -5,7 +5,7 @@ import SmoothLink from '@/src/components/Atoms/SmoothLink';
 const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Android', 'iOS', 'Java'];
 const Service = () => {
   return (
-    <div id="service" className="flex flex-row items-center justify-center w-full bg-white py-60">
+    <div id="service" className="flex flex-row items-center justify-center w-full bg-white py-40">
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
         <div className={'text-[#565CFF] text-lg font-medium'}>SERVICE AREA</div>
         <div className={'flex flex-col gap-16'}>

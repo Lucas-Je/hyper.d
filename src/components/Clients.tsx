@@ -7,7 +7,7 @@ const data = [
 ];
 const Clients = () => {
   return (
-    <div id="clients" className={'flex flex-row w-full bg-[#F6F6F6] items-center justify-center py-48 text-[#2F2D35]'}>
+    <div id="clients" className={'flex flex-row w-full bg-[#F6F6F6] items-center justify-center py-40 text-[#2F2D35]'}>
       <div className="flex flex-col items-center justify-center max-w-screen-xl px-[16px] gap-16">
         <div className={'flex flex-col items-center gap-2'}>
           <div className={'text-3xl font-bold'}>

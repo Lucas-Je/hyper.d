@@ -42,7 +42,7 @@ const data = [
 
 const Testimonial = () => {
   return (
-    <div id="reviews" className={'flex items-center justify-center w-full py-16 bg-white'}>
+    <div id="reviews" className={'flex items-center justify-center w-full py-40 bg-white'}>
       <div className="flex flex-col max-w-screen-xl gap-4">
         <div className="text-[#2F2D35] text-[60px] font-bold whitespace-pre-line break-keep pb-16 leading-[1.2]">
           고객 후기

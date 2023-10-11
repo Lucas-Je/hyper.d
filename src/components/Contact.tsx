@@ -67,7 +67,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className={'flex flex-row w-full items-center justify-center bg-white py-48'}>
+    <div id="contact" className={'flex flex-row w-full items-center justify-center bg-white py-40'}>
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-6">
         <div className={'text-3xl font-bold'}>문의하기</div>
         <form className={'flex w-full flex-col items-center gap-4'} onSubmit={handleSubmit}>
