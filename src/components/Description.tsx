@@ -21,13 +21,25 @@ const data = [
 
 const Description = () => {
   return (
-    <div id="description" className="flex items-center justify-center w-full py-60 bg-white px-[16px]">
-      <div className="grid grid-cols-2 max-w-screen-xl gap-16">
+    <div id="description" className="flex items-center justify-center w-full py-28 md:py-60 bg-white px-[16px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl gap-8 md:gap-16">
         {data.map((value, index) => {
           return (
-            <div key={index} className={'flex flex-col gap-1 justify-start whitespace-pre-line break-keep'}>
-              <div className={'flex text-[48px] text-[#2B1710] leading-[1.2] font-bold'}>{value.title}</div>
-              <div className={'flex text-[24px] text-[#6A7C96] leading-[1.6] mt-[20px]'}>{value.description}</div>
+            <div
+              key={index}
+              className={'flex flex-col gap-1 items-start justify-between whitespace-pre-line break-keep'}>
+              <div
+                className={
+                  'flex flex-1 w-full text-[24px] md:text-[48px] text-[#2B1710] leading-[1.4] font-bold justify-center md:justify-start text-center md:text-start'
+                }>
+                {value.title}
+              </div>
+              <div
+                className={
+                  'flex flex-1 w-full text-[18px] md:text-[24px] text-[#6A7C96] leading-[1.6] mt-[20px] justify-center md:justify-start text-center md:text-start'
+                }>
+                {value.description}
+              </div>
             </div>
           );
         })}

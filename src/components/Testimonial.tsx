@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const data = [
   {
@@ -41,28 +43,31 @@ const data = [
 ];
 
 const Testimonial = () => {
+  const isPc = useMediaQuery({
+    query: '(min-width : 768px)',
+  });
+
   return (
-    <div id="reviews" className={'flex items-center justify-center w-full py-40 bg-white'}>
-      <div className="flex flex-col max-w-screen-xl gap-4">
-        <div className="text-[#2F2D35] text-[60px] font-bold whitespace-pre-line break-keep pb-16 leading-[1.2]">
+    <div id="reviews" className={'flex items-center justify-center w-full py-20 md:py-40 bg-white'}>
+      <div className="flex flex-col max-w-screen-xl gap-16 overflow-hidden">
+        <div className="text-[#2F2D35] text-[30px] md:text-[60px] font-bold whitespace-pre-line break-keep leading-[1.2] px-4">
           고객 후기
         </div>
         <Swiper
-          className={'@apply w-full'}
-          slidesPerView={3.2}
+          className="custom-swiper w-full h-full"
+          slidesPerView={isPc ? 3.2 : 1.2}
           spaceBetween={16}
           initialSlide={data.length / 2}
           centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}>
+          modules={[Navigation]}
+          navigation={true}>
           {data.map((value, index) => {
             return (
-              <SwiperSlide key={index} className={'@apply flex w-auto bg-black rounded-3xl p-8'}>
-                <div className={'flex h-72 justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep'}>
-                  <div className={'flex flex-col gap-8'}>
+              <SwiperSlide key={index} className={'bg-black rounded-xl md:rounded-3xl p-4 md:p-8'}>
+                <div className={'flex h-full w-full justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep'}>
+                  <div className={'flex flex-col gap-4 md:gap-8'}>
                     <div className={'text-lg text-[#2F78FF]'}>{value.title}</div>
-                    <div className={'text-2xl font-bold  text-white'}>{value.description}</div>
+                    <div className={'text-2xl font-bold text-white'}>{value.description}</div>
                   </div>
                   <div className={'flex flex-row justify-between items-center'}>
                     <div className={'text-lg opacity-60 text-white'}>{value.writer}</div>

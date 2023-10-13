@@ -5,16 +5,16 @@ import SmoothLink from '@/src/components/Atoms/SmoothLink';
 const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Android', 'iOS', 'Java'];
 const Service = () => {
   return (
-    <div id="service" className="flex flex-row items-center justify-center w-full bg-white py-40">
+    <div id="service" className="flex flex-row items-center justify-center w-full bg-white py-20 md:py-40">
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
         <div className={'text-[#565CFF] text-lg font-medium'}>SERVICE AREA</div>
-        <div className={'flex flex-col gap-16'}>
-          <div className={'text-[#2F2D35] text-6xl font-bold whitespace-pre-line break-keep'}>
+        <div className={'flex flex-col gap-8 md:gap-16'}>
+          <div className={'text-[#2F2D35] text-4xl md:text-6xl font-bold whitespace-pre-line break-keep'}>
             {'신규 어플리케이션, 웹 개발\n기존 앱/웹 유지보수'}
           </div>
           <div className={'flex flex-col gap-4 text-lg font-medium text-[#2F2D35]'}>
             <div>주력 테크스택</div>
-            <div className={'flex flex-row gap-2'}>
+            <div className={'flex flex-row gap-2 flex-wrap'}>
               {skills.map((value, index) => {
                 return <Skill value={value} key={index} />;
               })}

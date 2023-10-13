@@ -166,16 +166,16 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" className={'flex flex-row w-full items-center justify-center py-40 bg-white z-1'}>
+    <div id="portfolio" className={'flex flex-row w-full items-center justify-center py-20 md:py-40 bg-white z-1'}>
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
         <div className={'text-[#565CFF] text-lg font-medium'}>PORTFOLIO</div>
-        <div className={'text-[#2F2D35] text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
+        <div className={'text-[#2F2D35] text-4xl md:text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
           하이퍼디 포트폴리오
         </div>
-        <div className={'flex flex-col gap-32'}>
+        <div className={'flex flex-col gap-16 md:gap-32'}>
           {data.map((value, index) => {
             return (
-              <div key={index} className={'flex flex-row gap-8'}>
+              <div key={index} className={'flex flex-col md:flex-row gap-8'}>
                 <div className={'flex flex-none flex-col gap-2 w-[400px]'}>
                   <div
                     className={
@@ -183,8 +183,8 @@ const Portfolio = () => {
                     }>
                     {value.type}
                   </div>
-                  <div className={'text-[#2F2D35] text-4xl font-normal mt-[16px]'}>{value.description}</div>
-                  <div className={'text-[#2F2D35] text-4xl font-bold '}>{value.title}</div>
+                  <div className={'text-[#2F2D35] text-3xl md:text-4xl font-normal mt-[16px]'}>{value.description}</div>
+                  <div className={'text-[#2F2D35] text-3xl md:text-4xl font-bold '}>{value.title}</div>
                   <a
                     href={value.link}
                     target="_blank"
@@ -210,7 +210,7 @@ const Portfolio = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex flex-1 flex-row overflow-x-scroll">
+                <div className="flex h-[360px] md:h-auto md:flex-1 flex-row overflow-x-scroll">
                   <div className="flex flex-1 w-auto h-auto gap-4">
                     {value.images.map((item, index) => (
                       <Image

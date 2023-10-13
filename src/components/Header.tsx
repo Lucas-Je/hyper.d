@@ -18,7 +18,7 @@ const Header = () => {
         <div className={'flex w-auto h-auto'}>
           <Image src={'logo.svg'} width="0" height="0" sizes="100vw" className="w-full h-auto" alt={'logo'} />
         </div>
-        <div className={'flex w-auto h-auto gap-8 text-[#2F2D35] text-sm'}>
+        <div className={'w-auto h-auto gap-8 text-[#2F2D35] text-sm hidden md:flex'}>
           {data.map((value, index) => {
             return (
               <SmoothLink key={index} href={value.url} scrollPosition={'start'}>
@@ -26,6 +26,14 @@ const Header = () => {
               </SmoothLink>
             );
           })}
+        </div>
+        <div className={'w-auto h-auto gap-8 text-[#2F2D35] text-sm md:hidden flex'}>
+          <SmoothLink href="#portfolio" scrollPosition={'start'}>
+            포트폴리오
+          </SmoothLink>
+          <SmoothLink href="#contact" scrollPosition={'start'}>
+            문의
+          </SmoothLink>
         </div>
       </div>
     </div>

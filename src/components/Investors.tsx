@@ -7,13 +7,15 @@ const data = [
 ];
 const Investors = () => {
   return (
-    <div id="investors" className={'flex flex-row w-full bg-[#2F2D35] items-center justify-center py-40 text-white'}>
+    <div
+      id="investors"
+      className={'flex flex-row w-full bg-[#2F2D35] items-center justify-center py-20 md:py-40 text-white'}>
       <div className="flex flex-col max-w-screen-xl items-center px-[16px] gap-16">
         <div className={'flex flex-col items-center gap-2'}>
           <div className={'text-3xl font-bold'}>투자자</div>
           <div className={'text-lg'}>하이퍼하이어는 아래 투자자들의 지원을 받고 있습니다</div>
         </div>
-        <div className={'flex flex-row gap-24'}>
+        <div className={'flex flex-row gap-16 md:gap-24 flex-wrap justify-center items-center'}>
           {data.map((value, index) => {
             return (
               <div key={index} className={'flex w-auto h-auto'}>

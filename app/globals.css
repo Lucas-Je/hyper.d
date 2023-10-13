@@ -29,3 +29,8 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.custom-swiper {
+  --swiper-pagination-color: grey;
+  --swiper-navigation-color: grey;
+}
