@@ -177,7 +177,7 @@ const Portfolio = () => {
           {data.map((value, index) => {
             return (
               <div key={index} className={'flex flex-col md:flex-row gap-8'}>
-                <div className={'flex flex-none flex-col gap-1 md:gap-2'}>
+                <div className={'flex flex-none flex-col gap-1 md:gap-2 md:w-[400px]'}>
                   <div
                     className={
                       'border border-black items-center justify-center px-[4px] py-[2px] font-ibmPlexMono text-xs md:text-sm font-semibold w-min'
@@ -220,8 +220,8 @@ const Portfolio = () => {
                         key={value.title + index}
                         src={item}
                         className="h-auto w-auto border border-[#BEC1FF] rounded-[20px]"
-                        width={0}
-                        height={0}
+                        width="0"
+                        height="0"
                         objectFit="cover"
                         alt=""
                         sizes="100vw"

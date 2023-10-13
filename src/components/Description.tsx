@@ -1,4 +1,4 @@
-import { useMediaQuery } from 'react-responsive';
+import { useIsPc } from '../hooks/useMobile';
 
 const data = [
   {
@@ -32,10 +32,7 @@ const data = [
 ];
 
 const Description = () => {
-  const isPc = useMediaQuery({
-    query: '(min-width : 768px)',
-  });
-
+  const isPc = useIsPc();
   return (
     <div id="description" className="flex items-center justify-center w-full py-28 md:py-60 bg-white px-[16px]">
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl gap-16">

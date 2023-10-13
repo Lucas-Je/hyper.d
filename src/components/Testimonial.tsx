@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 import { Navigation, Pagination } from 'swiper/modules';
+import { useIsPc } from '../hooks/useMobile';
 
 const data = [
   {
@@ -43,9 +43,7 @@ const data = [
 ];
 
 const Testimonial = () => {
-  const isPc = useMediaQuery({
-    query: '(min-width : 768px)',
-  });
+  const isPc = useIsPc();
 
   return (
     <div id="reviews" className={'flex items-center justify-center w-full py-20 md:py-40 bg-white'}>

@@ -1,11 +1,9 @@
 import React from 'react';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
-import { useMediaQuery } from 'react-responsive';
+import { useIsPc } from '../hooks/useMobile';
 
 const Introduce = () => {
-  const isPc = useMediaQuery({
-    query: '(min-width : 768px)',
-  });
+  const isPc = useIsPc();
 
   return (
     <div
