@@ -13,7 +13,8 @@ const Investors = () => {
       <div className="flex flex-col max-w-screen-xl items-center px-[16px] gap-16">
         <div className={'flex flex-col items-center gap-2'}>
           <div className={'text-3xl font-bold'}>투자자</div>
-          <div className={'text-lg'}>하이퍼하이어는 아래 투자자들의 지원을 받고 있습니다</div>
+
+          <div className={'text-lg text-center'}>든든한 투자자들의 지원을 받고 있습니다</div>
         </div>
         <div className={'flex flex-row gap-16 md:gap-24 flex-wrap justify-center items-center'}>
           {data.map((value, index) => {

@@ -1,7 +1,12 @@
 import React from 'react';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
+import { useMediaQuery } from 'react-responsive';
 
 const Introduce = () => {
+  const isPc = useMediaQuery({
+    query: '(min-width : 768px)',
+  });
+
   return (
     <div
       id="introduce"
@@ -17,7 +22,9 @@ const Introduce = () => {
           className={
             'flex text-white text-[30px] md:text-[60px] whitespace-pre-line leading-[1.4] text-center font-bold'
           }>
-          {'가격도 결과물도 천차만별인 개발 외주\n 시행착오 없이, 한 번에 하이퍼디.'}
+          {isPc
+            ? '가격도 결과물도 천차만별인 개발 외주\n 시행착오 없이, 한 번에 하이퍼디.'
+            : '개발 외주 시행착오 없이,\n한 번에 하이퍼디.'}
         </div>
         <SmoothLink
           href="#contact"

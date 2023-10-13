@@ -15,17 +15,17 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center font-inter bg-white">
       <Header />
-      <Introduce />
+      {/* <Introduce /> */}
       <div className="flex flex-col w-full gap-2 md:gap-4 bg-[#E0E0E0]" style={{ backgroundColor: '#E0E0E0' }}>
-        <Description />
+        {/* <Description />
         <Strengths />
         <Testimonial />
-        <Service />
+        <Service /> */}
         <Portfolio />
       </div>
-      <Clients />
+      {/* <Clients />
       <Investors />
-      <Contact />
+      <Contact /> */}
       <Footer />
     </main>
   );

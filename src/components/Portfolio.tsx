@@ -167,31 +167,34 @@ const data = [
 const Portfolio = () => {
   return (
     <div id="portfolio" className={'flex flex-row w-full items-center justify-center py-20 md:py-40 bg-white z-1'}>
-      <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
-        <div className={'text-[#565CFF] text-lg font-medium'}>PORTFOLIO</div>
-        <div className={'text-[#2F2D35] text-4xl md:text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
+      <div className="flex flex-col flex-1 max-w-screen-xl gap-4 pl-[16px]">
+        <div className={'text-[#565CFF] md:text-lg font-medium'}>PORTFOLIO</div>
+        <div
+          className={'text-[#2F2D35] text-3xl md:text-4xl md:text-6xl font-bold whitespace-pre-line break-keep pb-16'}>
           하이퍼디 포트폴리오
         </div>
         <div className={'flex flex-col gap-16 md:gap-32'}>
           {data.map((value, index) => {
             return (
               <div key={index} className={'flex flex-col md:flex-row gap-8'}>
-                <div className={'flex flex-none flex-col gap-2 w-[400px]'}>
+                <div className={'flex flex-none flex-col gap-1 md:gap-2'}>
                   <div
                     className={
-                      'border border-black items-center justify-center px-[4px] py-[2px] font-ibmPlexMono text-sm font-semibold w-min'
+                      'border border-black items-center justify-center px-[4px] py-[2px] font-ibmPlexMono text-xs md:text-sm font-semibold w-min'
                     }>
                     {value.type}
                   </div>
-                  <div className={'text-[#2F2D35] text-3xl md:text-4xl font-normal mt-[16px]'}>{value.description}</div>
-                  <div className={'text-[#2F2D35] text-3xl md:text-4xl font-bold '}>{value.title}</div>
+                  <div className={'text-[#2F2D35] text-2xl md:text-3xl md:text-4xl font-normal mt-[16px]'}>
+                    {value.description}
+                  </div>
+                  <div className={'text-[#2F2D35] text-2xl md:text-3xl md:text-4xl font-bold '}>{value.title}</div>
                   <a
                     href={value.link}
                     target="_blank"
                     className={
-                      'flex w-24 flex-row items-center justify-center gap-1 border-b border-[#2F2D35] mt-[16px]'
+                      'flex w-20 md:w-24 flex-row items-center justify-center gap-1 border-b border-[#2F2D35] mt-[16px]'
                     }>
-                    <div className={'flex text-lg font-medium text-[#2F2D35]'}>바로가기</div>
+                    <div className={'flex md:text-lg font-medium text-[#2F2D35]'}>바로가기</div>
                     <div className={'flex w-auto h-auto'}>
                       <Image
                         src={'/assets/icons/arrow_forward_black.svg'}
@@ -203,7 +206,7 @@ const Portfolio = () => {
                       />
                     </div>
                   </a>
-                  <div className={'text-[#646464] text-lg font-normal pt-8'}>사용된 테크 스택</div>
+                  <div className={'text-[#646464] md:text-lg font-normal pt-8'}>사용된 테크 스택</div>
                   <div className="flex flex-wrap gap-2">
                     {value.techStack.map((skill, index) => {
                       return <Skill key={index} value={skill} />;
@@ -216,9 +219,9 @@ const Portfolio = () => {
                       <Image
                         key={value.title + index}
                         src={item}
-                        className="h-full w-auto border border-[#BEC1FF] rounded-[20px]"
-                        width="0"
-                        height="0"
+                        className="h-auto w-auto border border-[#BEC1FF] rounded-[20px]"
+                        width={0}
+                        height={0}
                         objectFit="cover"
                         alt=""
                         sizes="100vw"

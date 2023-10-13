@@ -9,7 +9,7 @@ const Service = () => {
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-4">
         <div className={'text-[#565CFF] text-lg font-medium'}>SERVICE AREA</div>
         <div className={'flex flex-col gap-8 md:gap-16'}>
-          <div className={'text-[#2F2D35] text-4xl md:text-6xl font-bold whitespace-pre-line break-keep'}>
+          <div className={'text-[#2F2D35] text-3xl md:text-6xl font-bold whitespace-pre-line break-keep'}>
             {'신규 어플리케이션, 웹 개발\n기존 앱/웹 유지보수'}
           </div>
           <div className={'flex flex-col gap-4 text-lg font-medium text-[#2F2D35]'}>
