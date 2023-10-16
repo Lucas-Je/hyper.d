@@ -3,15 +3,17 @@ import React from 'react';
 
 import Image from 'next/image';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
-
-const data = [
-  { label: '서비스 소개', url: '#description' },
-  { label: '포트폴리오', url: '#portfolio' },
-  { label: '클라이언트', url: '#clients' },
-  { label: '세일즈 문의', url: '#contact' },
-];
+import { useTranslations } from 'next-intl';
 
 const Header = () => {
+  const t = useTranslations('header');
+  const data = [
+    { label: t('service'), url: '#description' },
+    { label: t('portfolio'), url: '#portfolio' },
+    { label: t('client'), url: '#clients' },
+    { label: t('sales'), url: '#contact' },
+  ];
+
   return (
     <div className="flex w-full bg-white items-center justify-center bg-white">
       <div className={'flex flex-row flex-1 items-center justify-between h-[56px] px-[16px] bg-white max-w-screen-xl'}>

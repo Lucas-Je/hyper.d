@@ -1,9 +1,11 @@
 import React from 'react';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
 import { useIsPc } from '../hooks/useMobile';
+import { useTranslations } from 'next-intl';
 
 const Introduce = () => {
   const isPc = useIsPc();
+  const t = useTranslations('introduce');
 
   return (
     <div
@@ -20,9 +22,7 @@ const Introduce = () => {
           className={
             'flex text-white text-[30px] md:text-[60px] whitespace-pre-line leading-[1.4] text-center font-bold'
           }>
-          {isPc
-            ? '가격도 결과물도 천차만별인 개발 외주\n 시행착오 없이, 한 번에 하이퍼디.'
-            : '개발 외주 시행착오 없이,\n한 번에 하이퍼디.'}
+          {isPc ? t('description') : t('description_mobile')}
         </div>
         <SmoothLink
           href="#contact"
@@ -30,7 +30,7 @@ const Introduce = () => {
             'flex cursor-pointer bg-white text-[#2D6DE4] text-base whitespace-pre-line py-[12px] px-[24px] rounded-3xl'
           }
           scrollPosition={'start'}>
-          문의하기
+          {t('contact')}
         </SmoothLink>
       </div>
     </div>

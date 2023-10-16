@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useIsPc } from '../hooks/useMobile';
+import { useTranslations } from 'next-intl';
 
 const data = [
   { name: 'alogic', image: '/assets/images/clients/alogic.svg' },
@@ -10,6 +11,7 @@ const data = [
 
 const Clients = () => {
   const isPc = useIsPc();
+  const t = useTranslations('clients');
 
   return (
     <div
@@ -17,11 +19,7 @@ const Clients = () => {
       className={'flex flex-row w-full bg-[#F6F6F6] items-center justify-center py-20 md:py-40 text-[#2F2D35]'}>
       <div className="flex flex-col items-center justify-center max-w-screen-xl px-[16px] gap-16">
         <div className={'flex flex-col items-center gap-2'}>
-          <div className={'text-3xl font-bold text-center'}>
-            {isPc
-              ? '이미 많은 업체들이 하이퍼디와 함께하고 있습니다'
-              : '이미 많은 업체들이\n하이퍼디와 함께하고 있습니다'}
-          </div>
+          <div className={'text-3xl font-bold text-center'}>{isPc ? t('title') : t('title_mobile')}</div>
         </div>
         <div className={'flex flex-row gap-16 md:gap-24 flex-wrap justify-center items-center'}>
           {data.map((value, index) => {
@@ -32,7 +30,7 @@ const Clients = () => {
             );
           })}
         </div>
-        <div className={'text-[#646464]'}>{'+ 더 많은 회사들'}</div>
+        <div className={'text-[#646464]'}>{t('more')}</div>
       </div>
     </div>
   );
