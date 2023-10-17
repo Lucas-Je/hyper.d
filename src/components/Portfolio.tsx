@@ -38,18 +38,6 @@ const data = [
   },
   {
     type: 'APP',
-    description: '제주 특산물 플랫폼',
-    title: '로컬스루',
-    link: 'https://localthru.co.kr/',
-    techStack: ['React.js', 'Typescript', 'Node.js', 'MongoDB'],
-    images: [
-      '/assets/images/portfolio/local-through-1.png',
-      '/assets/images/portfolio/local-through-2.png',
-      '/assets/images/portfolio/local-through-3.png',
-    ],
-  },
-  {
-    type: 'APP',
     description: '블록체인거래소',
     title: '오아시스 거래소',
     link: 'https://oasisexc.com/',
