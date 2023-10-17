@@ -12,10 +12,10 @@ const Portfolio = () => {
       link: 'https://workvisa.co.kr/',
       techStack: ['Naver Cloud', 'Nest.js', 'Next.js', 'PostgreSQL'],
       images: [
-        '/assets/images/portfolio/workvisa-1.png',
+        '/assets/images/portfolio/workvisa-2.png',
         '/assets/images/portfolio/workvisa-3.png',
         '/assets/images/portfolio/workvisa-4.png',
-        '/assets/images/portfolio/workvisa-2.png',
+        '/assets/images/portfolio/workvisa-1.png',
       ],
     },
     {
