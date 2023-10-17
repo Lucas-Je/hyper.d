@@ -37,4 +37,7 @@ next-env.d.ts
 # intelij
 .idea
 
+.env
+.env.development
+
 
