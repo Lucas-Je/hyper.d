@@ -31,10 +31,10 @@ const Header = () => {
         </div>
         <div className={'w-auto h-auto gap-8 text-[#2F2D35] text-sm md:hidden flex'}>
           <SmoothLink href="#portfolio" scrollPosition={'start'}>
-            포트폴리오
+            {t('portfolio')}
           </SmoothLink>
           <SmoothLink href="#contact" scrollPosition={'start'}>
-            문의
+            {t('sales')}
           </SmoothLink>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useIsPc } from '../hooks/useMobile';
 
 const data = [
   { name: 'spring camp', image: '/assets/images/investors/springcamp-white.svg' },
@@ -7,6 +8,7 @@ const data = [
   { name: 'bluepoint partners', image: '/assets/images/investors/bluepoint-white.svg' },
 ];
 const Investors = () => {
+  const isPc = useIsPc();
   const t = useTranslations('investors');
 
   return (
@@ -16,8 +18,7 @@ const Investors = () => {
       <div className="flex flex-col max-w-screen-xl items-center px-[16px] gap-16">
         <div className={'flex flex-col items-center gap-2'}>
           <div className={'text-3xl font-bold'}>{t('title')}</div>
-
-          <div className={'text-lg text-center'}>{t('description')}</div>
+          <div className={'text-lg text-center'}>{isPc ? t('description') : t('description_mobile')}</div>
         </div>
         <div className={'flex flex-row gap-16 md:gap-24 flex-wrap justify-center items-center'}>
           {data.map((value, index) => {

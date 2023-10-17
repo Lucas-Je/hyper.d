@@ -39,12 +39,12 @@ const Testimonial = () => {
       writer: t('writer_4'),
       icon: '/assets/images/testimonial/avatar1.png',
     },
-    {
-      title: t('title_5'),
-      description: t('description_5'),
-      writer: t('writer_5'),
-      icon: '/assets/images/testimonial/avatar1.png',
-    },
+    // {
+    //   title: t('title_5'),
+    //   description: t('description_5'),
+    //   writer: t('writer_5'),
+    //   icon: '/assets/images/testimonial/avatar1.png',
+    // },
   ];
 
   return (
