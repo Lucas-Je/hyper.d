@@ -58,6 +58,7 @@ const Contact = () => {
         setContactData({ company: '', name: '', phone: '', email: '', inquiry: '' });
       }
     } catch (err) {
+      console.log('error', err);
       return false;
     }
   };
