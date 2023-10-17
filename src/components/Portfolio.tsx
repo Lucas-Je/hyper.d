@@ -10,7 +10,7 @@ const Portfolio = () => {
       description: t('workvisa_description'),
       title: t('workvisa_title'),
       link: 'https://workvisa.co.kr/',
-      techStack: ['React Native', 'Django', 'MySQL'],
+      techStack: ['Naver Cloud', 'Nest.js', 'Next.js', 'PostgreSQL'],
       images: [
         '/assets/images/portfolio/workvisa-1.png',
         '/assets/images/portfolio/workvisa-3.png',
@@ -23,7 +23,7 @@ const Portfolio = () => {
       description: t('pops_description'),
       title: t('pops_title'),
       link: 'https://play.google.com/store/apps/details?id=com.popsclient',
-      techStack: ['React Native', 'Node.js', 'PostgreSQL'],
+      techStack: ['React Native', 'Node.js', 'MongoDB'],
       images: ['/assets/images/portfolio/pops-app-1.png', '/assets/images/portfolio/pops-app-2.png'],
     },
     {
@@ -41,8 +41,8 @@ const Portfolio = () => {
     },
     {
       type: ['APP', 'MAINTANANACE'],
-      description: t('oasis_exchange_title'),
-      title: t('oasis_exchange_description'),
+      description: t('oasis_exchange_description'),
+      title: t('oasis_exchange_title'),
       link: 'https://oasisexc.com/',
       techStack: ['Flutter', 'Next.js', 'Nest.js', 'gRPC', 'Plasma', 'RabbitMQ'],
       images: ['/assets/images/portfolio/oasis-exchange-1.png'],
@@ -146,7 +146,7 @@ const Portfolio = () => {
       description: t('pops_web_description'),
       title: t('pops_web_title'),
       link: 'https://pops.show/',
-      techStack: ['Node.js', 'MongoDB', 'WebRTC', 'Socket', 'AWS'],
+      techStack: ['AWS', 'MariaDB', 'Node.js', 'Socket', 'Webrtc'],
       images: [
         '/assets/images/portfolio/pops-web-1.png',
         '/assets/images/portfolio/pops-web-2.png',
@@ -187,7 +187,7 @@ const Portfolio = () => {
                     href={value.link}
                     target="_blank"
                     className={
-                      'flex w-20 md:w-24 flex-row items-center justify-center gap-1 border-b border-[#2F2D35] mt-[16px]'
+                      'flex w-24 md:w-24 flex-row items-center justify-around gap-1 border-b border-[#2F2D35] mt-[16px]'
                     }>
                     <div className={'flex md:text-lg font-medium text-[#2F2D35]'}>{t('go')}</div>
                     <div className={'flex w-auto h-auto'}>
@@ -214,11 +214,10 @@ const Portfolio = () => {
                       <Image
                         key={value.title + index}
                         src={item}
-                        className="h-auto w-auto border border-[#BEC1FF] rounded-[20px]"
                         width="0"
                         height="0"
-                        objectFit="cover"
                         alt=""
+                        className="h-full w-auto border border-[#BEC1FF] rounded-[20px]"
                         sizes="100vw"
                       />
                     ))}

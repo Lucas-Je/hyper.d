@@ -6,7 +6,7 @@
     "sales": "Sales Inquiry"
   },
   "introduce": {
-    "description": "IT OUTSOURCING,\nHYPERED AT ONCE WITHOUT TRIAL AND ERROR.",
+    "description": "IT OUTSOURCING,\nHYPERED AT ONCE\nWITHOUT TRIAL AND ERROR.",
     "description_mobile": "IT OUTSOURCING,\nHYPERED AT ONCE WITHOUT\nTRIAL AND ERROR.",
     "contact": "CONTACT US"
   },
@@ -41,9 +41,9 @@
   },
   "testimonial": {
     "title": "REVIEW",
-    "title_1": "비개발팀이 앱을 제작하는 법",
-    "description_1": "팀 내부 개발자가 없고, 저도 개발을 몰라 걱정했지만 하이퍼디를 만나고 무사히 완료하고 출시했어요.",
-    "writer_1": "바로캐시 김병찬 대표",
+    "title_1": "The way how non-IT company can develop",
+    "description_1": "Although we didn't have inhouse development team, met HyperD and successfully completed and released the product.",
+    "writer_1": "BAROCASH CEO, KIM BYUNG-CHAN",
     "title_2": "To launch a platform",
     "description_2": "“We were able to launch the platform from start to finish. Want to work with HyperD as a long-term partner.”",
     "writer_2": "WORK VISA CEO,\nKO GYEONG-WOO",
