@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
+import { useIsPc } from '../hooks/useMobile';
 
 const Strengths = () => {
+  const isPc = useIsPc();
   const t = useTranslations('strength');
 
   return (
@@ -8,7 +10,9 @@ const Strengths = () => {
       <div className="grid grid-cols-1 md:grid-cols-none grid-rows-none md:grid-rows-6 grid-flow-row md:grid-flow-col gap-[24px] px-[16px] max-w-screen-xl">
         <div className={'flex flex-col md:row-span-2 justify-around whitespace-pre-line break-keep py-[2px]'}>
           <div className={'flex text-[30px] md:text-[44px] text-[#2B1710] font-bold'}>{t('title')}</div>
-          <div className={'flex text-[18px] md:text-[20px] md:font-bold text-[#2D6DE4]'}>{t('description')}</div>
+          <div className={'flex text-[18px] md:text-[20px] md:font-bold text-[#2D6DE4]'}>
+            {isPc ? t('description') : t('description_mobile')}
+          </div>
         </div>
         <div
           className={`flex flex-col md:row-span-4 gap-[10px] rounded-xl justify-between whitespace-pre-line break-keep p-8`}

@@ -3,7 +3,7 @@ import Skill from '@/src/components/Skill';
 import SmoothLink from '@/src/components/Atoms/SmoothLink';
 import { useTranslations } from 'next-intl';
 
-const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Android', 'iOS', 'Java'];
+const skills = ['React.js', 'NodeJs', 'React Native', 'Vue.js', 'Flutter', 'Django', 'Kotlin', 'Swift', 'Java'];
 const Service = () => {
   const t = useTranslations('service');
 
