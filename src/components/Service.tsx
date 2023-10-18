@@ -24,8 +24,8 @@ const Service = () => {
             </div>
             <div className={'flex flex-row gap-2'}>
               <div className={'flex flex-col text-lg font-medium text-[#646464]'}>{t('question')}</div>
-              <div className={'flex flex-row gap-1 border-b border-[#2F2D35]'}>
-                <SmoothLink href="#contact" className={'text-lg font-medium text-[#2F2D35]'}>
+              <div className={'flex flex-row gap-1 border-b border-[#2F2D35] items-center w-[180px]'}>
+                <SmoothLink href="#contact" className={'text-sm md:text-lg font-medium text-[#2F2D35]'}>
                   {t('contact')}
                 </SmoothLink>
                 <div className={'flex w-auto h-auto'}>

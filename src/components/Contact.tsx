@@ -74,8 +74,8 @@ const Contact = () => {
     <div id="contact" className={'flex flex-row w-full items-center justify-center bg-white py-20 md:py-40'}>
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-6">
         <div className={'text-3xl font-bold'}>{t('title')}</div>
-        <form className={'flex w-full flex-col items-center gap-4'} onSubmit={handleSubmit}>
-          <div className={'flex w-full flex-row gap-4'}>
+        <form className={'flex w-full flex-col items-center gap-2'} onSubmit={handleSubmit}>
+          <div className={'flex w-full flex-row gap-2'}>
             <input
               className={
                 'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
@@ -95,7 +95,7 @@ const Contact = () => {
               onChange={(event) => setContactData({ ...contactData, name: event.target.value })}
             />
           </div>
-          <div className={'flex w-full flex-row gap-4'}>
+          <div className={'flex w-full flex-row gap-2'}>
             <input
               className={
                 'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'

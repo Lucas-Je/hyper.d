@@ -46,7 +46,7 @@ const Strengths = () => {
           style={{ boxShadow: '0px 4px 17px 0px rgba(0, 0, 0, 0.15)' }}>
           <div className="flex flex-col gap-[10px]">
             <div className={'flex text-[26px] md:text-[36px] text-[#2B1710] leading-[1.3] font-bold'}>
-              {t('title_2')}
+              {t('title_3')}
             </div>
             <div className={'flex flex-1 md:text-[24px] text-[#6A7C96] leading-[1.6] whitespace-pre-line break-keep'}>
               {t('description_3')}

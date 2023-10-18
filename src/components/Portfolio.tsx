@@ -179,7 +179,7 @@ const Portfolio = () => {
                       </div>
                     ))}
                   </div>
-                  <div className={'text-[#2F2D35] text-2xl md:text-3xl md:text-4xl font-normal mt-[16px]'}>
+                  <div className={'text-[#2F2D35] text-xl md:text-2xl md:text-4xl font-normal mt-[16px]'}>
                     {value.description}
                   </div>
                   <div className={'text-[#2F2D35] text-2xl md:text-3xl md:text-4xl font-bold '}>{value.title}</div>
@@ -187,10 +187,10 @@ const Portfolio = () => {
                     href={value.link}
                     target="_blank"
                     className={
-                      'flex w-24 md:w-24 flex-row items-center justify-around gap-1 border-b border-[#2F2D35] mt-[16px]'
+                      'flex w-[120px] flex-row items-center justify-around border-b border-[#2F2D35] mt-[16px]'
                     }>
-                    <div className={'flex md:text-lg font-medium text-[#2F2D35]'}>{t('go')}</div>
-                    <div className={'flex w-auto h-auto'}>
+                    <div className={'flex flex-1 md:text-lg font-medium text-[#2F2D35]'}>{t('go')}</div>
+                    <div className={'flex h-auto'}>
                       <Image
                         src={'/assets/icons/arrow_forward_black.svg'}
                         width="0"
@@ -208,8 +208,8 @@ const Portfolio = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex h-[360px] md:h-auto md:flex-1 flex-row overflow-x-scroll">
-                  <div className="flex flex-1 w-auto h-auto gap-4">
+                <div className="flex h-[260px] md:h-[360px] md:flex-1 flex-row overflow-x-scroll">
+                  <div className="flex h-full gap-4">
                     {value.images.map((item, index) => (
                       <Image
                         key={value.title + index}
@@ -217,7 +217,7 @@ const Portfolio = () => {
                         width="0"
                         height="0"
                         alt=""
-                        className="h-full w-auto border border-[#BEC1FF] rounded-[20px]"
+                        className="h-full w-min border border-[#BEC1FF] rounded-[20px]"
                         sizes="100vw"
                       />
                     ))}
