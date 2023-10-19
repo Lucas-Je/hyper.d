@@ -24,11 +24,11 @@ const Service = () => {
             </div>
             <div className={'flex flex-row gap-2'}>
               <div className={'flex flex-col text-lg font-medium text-[#646464]'}>{t('question')}</div>
-              <div className={'flex flex-row gap-1 border-b border-[#2F2D35] items-center w-[180px]'}>
+              <div className={'flex flex-row gap-1 border-b border-[#2F2D35] items-center'}>
                 <SmoothLink href="#contact" className={'text-sm md:text-lg font-medium text-[#2F2D35]'}>
                   {t('contact')}
                 </SmoothLink>
-                <div className={'flex w-auto h-auto'}>
+                <div className={'flex w-[20px] h-[20px]'}>
                   <Image
                     src={'/assets/icons/arrow_forward_black.svg'}
                     width="0"

@@ -187,10 +187,10 @@ const Portfolio = () => {
                     href={value.link}
                     target="_blank"
                     className={
-                      'flex w-[120px] flex-row items-center justify-around border-b border-[#2F2D35] mt-[16px]'
+                      'flex flex-row items-center w-fit gap-2 items-center justify-around border-b border-[#2F2D35] mt-[16px]'
                     }>
                     <div className={'flex flex-1 md:text-lg font-medium text-[#2F2D35]'}>{t('go')}</div>
-                    <div className={'flex h-auto'}>
+                    <div className={'flex w-[20px] h-[20px]'}>
                       <Image
                         src={'/assets/icons/arrow_forward_black.svg'}
                         width="0"

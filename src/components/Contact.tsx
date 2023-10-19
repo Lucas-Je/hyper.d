@@ -75,10 +75,10 @@ const Contact = () => {
       <div className="flex flex-col flex-1 max-w-screen-xl px-[16px] gap-6">
         <div className={'text-3xl font-bold'}>{t('title')}</div>
         <form className={'flex w-full flex-col items-center gap-2'} onSubmit={handleSubmit}>
-          <div className={'flex w-full flex-row gap-2'}>
+          <div className={'flex w-full flex-row gap-2 overflow-x-hidden'}>
             <input
               className={
-                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded m-0'
               }
               type="text"
               placeholder={t('company')}
@@ -87,7 +87,7 @@ const Contact = () => {
             />
             <input
               className={
-                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
+                'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded m-0'
               }
               type="text"
               placeholder={t('name')}
@@ -95,7 +95,7 @@ const Contact = () => {
               onChange={(event) => setContactData({ ...contactData, name: event.target.value })}
             />
           </div>
-          <div className={'flex w-full flex-row gap-2'}>
+          <div className={'flex w-full flex-row gap-2 overflow-x-hidden'}>
             <input
               className={
                 'flex flex-1 border border-[#DEDEDE] bg-[#F2F1F3] text-[#7E7E7E] p-2 text-sm items-center rounded'
