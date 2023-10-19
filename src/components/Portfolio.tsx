@@ -1,6 +1,44 @@
 import Image from 'next/image';
 import Skill from '@/src/components/Skill';
 import { useTranslations } from 'next-intl';
+import workvisa_1 from '@/public/assets/images/portfolio/workvisa-2.png';
+import workvisa_2 from '@/public/assets/images/portfolio/workvisa-3.png';
+import workvisa_3 from '@/public/assets/images/portfolio/workvisa-4.png';
+import workvisa_4 from '@/public/assets/images/portfolio/workvisa-1.png';
+import pops_app_1 from '@/public/assets/images/portfolio/pops-app-1.png';
+import pops_app_2 from '@/public/assets/images/portfolio/pops-app-2.png';
+import modoo_fashion_1 from '@/public/assets/images/portfolio/modoo-fashion-1.png';
+import modoo_fashion_2 from '@/public/assets/images/portfolio/modoo-fashion-2.png';
+import modoo_fashion_3 from '@/public/assets/images/portfolio/modoo-fashion-3.png';
+import modoo_fashion_4 from '@/public/assets/images/portfolio/modoo-fashion-4.png';
+import oasis_exchange_1 from '@/public/assets/images/portfolio/oasis-exchange-1.png';
+import oranman_1 from '@/public/assets/images/portfolio/oranman-1.png';
+import oranman_2 from '@/public/assets/images/portfolio/oranman-2.png';
+import oranman_3 from '@/public/assets/images/portfolio/oranman-3.png';
+import pingcalender_1 from '@/public/assets/images/portfolio/pingcalender-1.png';
+import pingcalender_2 from '@/public/assets/images/portfolio/pingcalender-2.png';
+import pingcalender_3 from '@/public/assets/images/portfolio/pingcalender-3.png';
+import mathpang_1 from '@/public/assets/images/portfolio/mathpang-1.png';
+import mathpang_2 from '@/public/assets/images/portfolio/mathpang-2.png';
+import mathpang_3 from '@/public/assets/images/portfolio/mathpang-3.png';
+import episoden_1 from '@/public/assets/images/portfolio/episoden-1.png';
+import episoden_2 from '@/public/assets/images/portfolio/episoden-2.png';
+import episoden_3 from '@/public/assets/images/portfolio/episoden-3.png';
+import trevari_1 from '@/public/assets/images/portfolio/trevari-1.png';
+import trevari_2 from '@/public/assets/images/portfolio/trevari-2.png';
+import trevari_3 from '@/public/assets/images/portfolio/trevari-3.png';
+import trevari_4 from '@/public/assets/images/portfolio/trevari-4.png';
+import gadjet_1 from '@/public/assets/images/portfolio/gadjet-1.png';
+import gadjet_3 from '@/public/assets/images/portfolio/gadjet-3.png';
+import gadjet_4 from '@/public/assets/images/portfolio/gadjet-4.png';
+import gadjet_2 from '@/public/assets/images/portfolio/gadjet-2.png';
+import nadio_1 from '@/public/assets/images/portfolio/nadio-1.png';
+import nadio_2 from '@/public/assets/images/portfolio/nadio-2.png';
+import nadio_3 from '@/public/assets/images/portfolio/nadio-3.png';
+import vary_1 from '@/public/assets/images/portfolio/vary-1.png';
+import pops_web_1 from '@/public/assets/images/portfolio/pops-web-1.png';
+import pops_web_2 from '@/public/assets/images/portfolio/pops-web-2.png';
+import pops_web_3 from '@/public/assets/images/portfolio/pops-web-3.png';
 
 const Portfolio = () => {
   const t = useTranslations('portfolio');
@@ -11,12 +49,7 @@ const Portfolio = () => {
       title: t('workvisa_title'),
       link: 'https://workvisa.co.kr/',
       techStack: ['Naver Cloud', 'Nest.js', 'Next.js', 'PostgreSQL'],
-      images: [
-        '/assets/images/portfolio/workvisa-2.png',
-        '/assets/images/portfolio/workvisa-3.png',
-        '/assets/images/portfolio/workvisa-4.png',
-        '/assets/images/portfolio/workvisa-1.png',
-      ],
+      images: [workvisa_1, workvisa_2, workvisa_3, workvisa_4],
     },
     {
       type: ['APP'],
@@ -24,7 +57,7 @@ const Portfolio = () => {
       title: t('pops_title'),
       link: 'https://play.google.com/store/apps/details?id=com.popsclient',
       techStack: ['React Native', 'Node.js', 'MongoDB'],
-      images: ['/assets/images/portfolio/pops-app-1.png', '/assets/images/portfolio/pops-app-2.png'],
+      images: [pops_app_1, pops_app_2],
     },
     {
       type: ['APP'],
@@ -32,12 +65,7 @@ const Portfolio = () => {
       title: t('modoo_fashion_title'),
       link: 'https://play.google.com/store/apps/details?id=com.modoofashion.client&hl=ko-KR',
       techStack: ['Flutter', 'Node.js', 'MongoDB'],
-      images: [
-        '/assets/images/portfolio/modoo-fashion-1.png',
-        '/assets/images/portfolio/modoo-fashion-2.png',
-        '/assets/images/portfolio/modoo-fashion-3.png',
-        '/assets/images/portfolio/modoo-fashion-4.png',
-      ],
+      images: [modoo_fashion_1, modoo_fashion_2, modoo_fashion_3, modoo_fashion_4],
     },
     {
       type: ['APP', 'MAINTANANACE'],
@@ -45,7 +73,7 @@ const Portfolio = () => {
       title: t('oasis_exchange_title'),
       link: 'https://oasisexc.com/',
       techStack: ['Flutter', 'Next.js', 'Nest.js', 'gRPC', 'Plasma', 'RabbitMQ'],
-      images: ['/assets/images/portfolio/oasis-exchange-1.png'],
+      images: [oasis_exchange_1],
     },
     {
       type: ['APP'],
@@ -53,11 +81,7 @@ const Portfolio = () => {
       title: t('oranman_title'),
       link: 'https://play.google.com/store/apps/details?id=com.oranman',
       techStack: ['React Native', 'Realm', 'Typescript', 'Node.js'],
-      images: [
-        '/assets/images/portfolio/oranman-1.png',
-        '/assets/images/portfolio/oranman-2.png',
-        '/assets/images/portfolio/oranman-3.png',
-      ],
+      images: [oranman_1, oranman_2, oranman_3],
     },
     {
       type: ['APP'],
@@ -65,11 +89,7 @@ const Portfolio = () => {
       title: t('ping_calender_title'),
       link: 'https://play.google.com/store/apps/details?id=com.tothepoint.pingtopong&hl=ko&gl=US',
       techStack: ['Flutter', 'Dart'],
-      images: [
-        '/assets/images/portfolio/pingcalender-1.png',
-        '/assets/images/portfolio/pingcalender-2.png',
-        '/assets/images/portfolio/pingcalender-3.png',
-      ],
+      images: [pingcalender_1, pingcalender_2, pingcalender_3],
     },
     {
       type: ['APP'],
@@ -77,11 +97,7 @@ const Portfolio = () => {
       title: t('mathpang_title'),
       link: 'https://play.google.com/store/apps/details?id=com.mathpang.game',
       techStack: ['React Native', 'Typescript'],
-      images: [
-        '/assets/images/portfolio/mathpang-1.png',
-        '/assets/images/portfolio/mathpang-2.png',
-        '/assets/images/portfolio/mathpang-3.png',
-      ],
+      images: [mathpang_1, mathpang_2, mathpang_3],
     },
     {
       type: ['WEB', 'MAINTANECE'],
@@ -89,11 +105,7 @@ const Portfolio = () => {
       title: t('episoden_title'),
       link: 'https://episoden.com/main',
       techStack: ['Next.js', 'Typescript', 'WebRTC'],
-      images: [
-        '/assets/images/portfolio/episoden-1.png',
-        '/assets/images/portfolio/episoden-2.png',
-        '/assets/images/portfolio/episoden-3.png',
-      ],
+      images: [episoden_1, episoden_2, episoden_3],
     },
     {
       type: ['WEB', 'MAINTANECE'],
@@ -101,12 +113,7 @@ const Portfolio = () => {
       title: t('trevari_title'),
       link: 'https://m.trevari.co.kr/',
       techStack: ['React.js', 'Typescript'],
-      images: [
-        '/assets/images/portfolio/trevari-1.png',
-        '/assets/images/portfolio/trevari-2.png',
-        '/assets/images/portfolio/trevari-3.png',
-        '/assets/images/portfolio/trevari-4.png',
-      ],
+      images: [trevari_1, trevari_2, trevari_3, trevari_4],
     },
     {
       type: ['APP', 'MAINTANECE'],
@@ -114,12 +121,7 @@ const Portfolio = () => {
       title: t('gadjet_title'),
       link: 'https://gadjet.io/',
       techStack: ['React.js', 'Node.js', 'React Native'],
-      images: [
-        '/assets/images/portfolio/gadjet-1.png',
-        '/assets/images/portfolio/gadjet-3.png',
-        '/assets/images/portfolio/gadjet-4.png',
-        '/assets/images/portfolio/gadjet-2.png',
-      ],
+      images: [gadjet_1, gadjet_3, gadjet_4, gadjet_2],
     },
     {
       type: ['WEB', 'MAINTANECE'],
@@ -127,11 +129,7 @@ const Portfolio = () => {
       title: t('nadio_title'),
       link: 'https://www.nadio.co.kr/',
       techStack: ['React Native', 'Django', 'Python', 'PostgreSQL'],
-      images: [
-        '/assets/images/portfolio/nadio-1.png',
-        '/assets/images/portfolio/nadio-2.png',
-        '/assets/images/portfolio/nadio-3.png',
-      ],
+      images: [nadio_1, nadio_2, nadio_3],
     },
     {
       type: ['WEB', 'MAINTANECE'],
@@ -139,7 +137,7 @@ const Portfolio = () => {
       title: t('vary_title'),
       link: 'https://vary.one/',
       techStack: ['React.js', 'AWS', 'Node.js', 'MongoDB'],
-      images: ['/assets/images/portfolio/vary-1.png'],
+      images: [vary_1],
     },
     {
       type: ['SERVER'],
@@ -147,11 +145,7 @@ const Portfolio = () => {
       title: t('pops_web_title'),
       link: 'https://pops.show/',
       techStack: ['AWS', 'MariaDB', 'Node.js', 'Socket', 'Webrtc'],
-      images: [
-        '/assets/images/portfolio/pops-web-1.png',
-        '/assets/images/portfolio/pops-web-2.png',
-        '/assets/images/portfolio/pops-web-3.png',
-      ],
+      images: [pops_web_1, pops_web_2, pops_web_3],
     },
   ];
 
@@ -214,11 +208,8 @@ const Portfolio = () => {
                       <Image
                         key={value.title + index}
                         src={item}
-                        width="0"
-                        height="0"
-                        alt=""
+                        alt={value.title + index + 'image'}
                         className="h-full w-min border border-[#BEC1FF] rounded-[20px]"
-                        sizes="100vw"
                       />
                     ))}
                   </div>
