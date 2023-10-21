@@ -117,11 +117,13 @@
     "complete": "Successfully sent."
   },
   "footer": {
+    "company_type_ko": "Korea",
     "company_ko": "Company: Hyperhire Co., Ltd.",
     "ceo_ko": "CEO: Juhyun Kim",
     "register_num_ko": "Registration No: 427-86-01187",
     "email_ko": "Email: contact@hyperhire.in",
     "address_ko": "Address: 238, B1, 479, Gangnam-daero, Seocho-gu, Seoul, Republic of Korea",
+    "company_type_en": "India",
     "company_en": "Company: Hyperhire India Private Limited",
     "ceo_en": "CEO: Juhyun Kim",
     "register_num_en": "CIN: U74110DL2016PTC290812",

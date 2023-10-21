@@ -9,6 +9,7 @@ const Footer = () => {
         <div className={'flex flex-col gap-8 md:gap-0'}>
           <div className={'flex flex-col md:flex-row gap-8 md:justify-start'}>
             <div className="flex flex-col flex-1 items-start justify-start gap-4">
+              <div className="font-bold">{t('company_type_ko')}</div>
               <div className={'flex flex-row gap-1 flex-wrap'}>
                 <div>{t('company_ko')}</div>
                 <div>{'|'}</div>
@@ -21,6 +22,7 @@ const Footer = () => {
               <div>{t('address_ko')}</div>
             </div>
             <div className="flex flex-col flex-1 items-start justify-start gap-4">
+              <div className="font-bold">{t('company_type_en')}</div>
               <div className={'flex flex-row gap-1 flex-wrap'}>
                 <div>{t('company_en')}</div>
                 <div>{'|'}</div>
