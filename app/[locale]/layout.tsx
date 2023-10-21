@@ -23,25 +23,28 @@ export async function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://hyper-d.xyz'),
-  title: 'Hyper.D',
-  description: '가격도 결과물도 천차만별인 개발 외주. 시행착오 없이, 한 번에 하이퍼디.',
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    type: 'website',
-    siteName: 'hyper-d',
-    title: 'Hyper.D',
-    description: '가격도 결과물도 천차만별인 개발 외주. 시행착오 없이, 한 번에 하이퍼디.',
-    images: {
-      url: 'https://hyper-d.xyz/logo.png',
-      alt: 'hyper-d',
-      type: 'png',
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const messages = (await import(`@/public/messages/${locale}.json`)).metadata;
+  return {
+    metadataBase: new URL('https://hyper-d.xyz'),
+    title: messages.title,
+    description: messages.description,
+    alternates: {
+      canonical: '/',
     },
-  },
-};
+    openGraph: {
+      type: 'website',
+      siteName: 'hyper-d',
+      title: 'Hyper.D',
+      description: messages.description,
+      images: {
+        url: 'https://hyper-d.xyz/logo.png',
+        alt: 'hyper-d',
+        type: 'png',
+      },
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
