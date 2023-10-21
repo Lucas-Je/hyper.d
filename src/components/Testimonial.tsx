@@ -25,13 +25,13 @@ const Testimonial = () => {
       title: t('title_2'),
       description: t('description_2'),
       writer: t('writer_2'),
-      icon: '/assets/images/testimonial/avatar1.png',
+      icon: '/assets/images/testimonial/avatar2.png',
     },
     {
       title: t('title_3'),
       description: t('description_3'),
       writer: t('writer_3'),
-      icon: '/assets/images/testimonial/avatar1.png',
+      icon: '/assets/images/testimonial/avatar3.png',
     },
     {
       title: t('title_4'),
@@ -55,7 +55,7 @@ const Testimonial = () => {
         </div>
         <Swiper
           className="custom-swiper w-full h-full"
-          slidesPerView={isPc ? 3.2 : 1.2}
+          slidesPerView={isPc ? 2.2 : 1.2}
           spaceBetween={16}
           initialSlide={data.length / 2}
           centeredSlides={true}
@@ -63,26 +63,35 @@ const Testimonial = () => {
           navigation={true}>
           {data.map((value, index) => {
             return (
-              <SwiperSlide key={index} className={'bg-black rounded-xl md:rounded-3xl p-4 md:p-8'}>
-                <div className={'flex h-full w-full justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep'}>
-                  <div className={'flex flex-col gap-4 md:gap-8'}>
-                    <div className={'text-lg text-[#2F78FF]'}>{value.title}</div>
-                    <div className={'text-2xl font-bold text-white'}>{value.description}</div>
-                  </div>
-                  <div className={'flex flex-row justify-between items-center'}>
-                    <div className={'text-lg opacity-60 text-white'}>{value.writer}</div>
-                    <div className={'flex w-12 h-auto bg-white rounded-full'}>
-                      <Image
-                        src={value.icon}
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="w-full h-auto"
-                        alt={value.writer}
-                      />
+              <SwiperSlide key={index} zoom className="custom-swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+                {({ isActive }) => (
+                  <div
+                    className={`${isActive ? 'bg-black' : 'bg-[#646464]'} flex rounded-xl md:rounded-3xl p-4 md:p-8`}
+                    style={{ height: '100%' }}>
+                    <div
+                      className={`flex h-full w-full justify-between flex-col p-4 gap-4 whitespace-pre-line break-keep ${
+                        isActive ? '' : 'opacity-50'
+                      }`}>
+                      <div className={'flex flex-col gap-4 flex-1'}>
+                        <div className={'text-lg text-[#2F78FF] text-bold'}>{value.title}</div>
+                        <div className={'text-2xl font-bold text-white'}>{value.description}</div>
+                      </div>
+                      <div className={'flex flex-row justify-between items-center'}>
+                        <div className={'text-lg opacity-60 text-white'}>{value.writer}</div>
+                        <div className={'flex w-12 h-auto bg-white rounded-full'}>
+                          <Image
+                            src={value.icon}
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            className="w-full h-auto"
+                            alt={value.writer}
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </SwiperSlide>
             );
           })}

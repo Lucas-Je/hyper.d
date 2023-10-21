@@ -31,6 +31,14 @@ body {
 }
 
 .custom-swiper {
-  --swiper-pagination-color: grey;
-  --swiper-navigation-color: grey;
+  --swiper-pagination-color: black;
+  --swiper-navigation-color: black;
+}
+
+.custom-swiper-slide {
+  height: auto
+}
+
+.swiper-slide {
+  height: auto;
 }
